@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34414.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DdddOcr.Net", "DdddOcr.Net\DdddOcr.Net.csproj", "{793BCFDB-6439-42C3-A210-E4964929BB07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DdddOcr.Demo", "DdddOcr.Demo\DdddOcr.Demo.csproj", "{05C43349-6B14-44B8-A7ED-8FD18F50BC4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{793BCFDB-6439-42C3-A210-E4964929BB07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793BCFDB-6439-42C3-A210-E4964929BB07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793BCFDB-6439-42C3-A210-E4964929BB07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793BCFDB-6439-42C3-A210-E4964929BB07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05C43349-6B14-44B8-A7ED-8FD18F50BC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05C43349-6B14-44B8-A7ED-8FD18F50BC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05C43349-6B14-44B8-A7ED-8FD18F50BC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05C43349-6B14-44B8-A7ED-8FD18F50BC4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3E19BEF-0844-44D3-A88E-FF84D3B1EF60}
+	EndGlobalSection
+EndGlobal

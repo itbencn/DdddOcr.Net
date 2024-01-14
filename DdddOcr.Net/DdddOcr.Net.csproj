@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Authors>itbencn</Authors>
+		<Version>0.24.0115</Version>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageProjectUrl>https://github.com/itbencn/DdddOcr.Net</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Description>python项目ddddocr的NET移植，由于个人精力有限，目前仅移植了classification相关功能</Description>
+		<RepositoryUrl>https://github.com/itbencn/DdddOcr.Net.git</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>ddddocr;带带弟弟;验证码识别</PackageTags>
+		<Title>DdddOcr.Net</Title>
+		<NeutralLanguage>zh-CN</NeutralLanguage>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<IncludeSymbols>False</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <DebugType>portable</DebugType>
+	  <Optimize>True</Optimize>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DebugType>portable</DebugType>
+	  <Optimize>True</Optimize>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.16.3" />
+		<PackageReference Include="OpenCvSharp4.Windows" Version="4.9.0.20240103" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="DdddOcr.Net.targets">
+			<Pack>True</Pack>
+			<PackagePath>build</PackagePath>
+		</None>
+		<None Update="onnxs\common.onnx">
+		  <Pack>True</Pack>
+		  <PackagePath>content</PackagePath>
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="onnxs\common_det.onnx">
+			<Pack>True</Pack>
+			<PackagePath>content</PackagePath>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="onnxs\common_old.onnx">
+			<Pack>True</Pack>
+			<PackagePath>content</PackagePath>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="LICENSE.txt">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Update="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Properties\" />
+	</ItemGroup>
+
+</Project>
