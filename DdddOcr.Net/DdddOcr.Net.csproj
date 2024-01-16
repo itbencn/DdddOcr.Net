@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Authors>itbencn</Authors>
-		<Version>0.24.0115</Version>
+		<Version>0.24.0116</Version>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageProjectUrl>https://github.com/itbencn/DdddOcr.Net</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -23,17 +23,18 @@
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 	  <DebugType>portable</DebugType>
-	  <Optimize>True</Optimize>
+	  <Optimize>False</Optimize>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
 	  <DebugType>portable</DebugType>
-	  <Optimize>True</Optimize>
+	  <Optimize>False</Optimize>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.16.3" />
 		<PackageReference Include="OpenCvSharp4.Windows" Version="4.9.0.20240103" />
+		<PackageReference Include="SixLabors.ImageSharp" Version="3.1.2" />
 	</ItemGroup>
 
 	<ItemGroup>

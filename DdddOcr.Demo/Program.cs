@@ -6,11 +6,17 @@ namespace DdddOcr.Demo
     {
         static void Main(string[] args)
         {
-            DDDDOCR ddddOcr = new DDDDOCR(DdddOcrMode.ClassifyOld);
+            var image = File.ReadAllBytes(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "code.gif"));
+            var type = image.GetImageFormat();
+            if (type.FileExtensions.Contains("gif"))
+            {
+                image = image.GifToPng();
+            }
+            DDDDOCR ddddOcr = new DDDDOCR(DdddOcrMode.ClassifyBeta);
 
-            var result = ddddOcr.Classify(File.ReadAllBytes(@"code1.png"));
+            var result = ddddOcr.Classify(image);
 
-            Console.WriteLine(result);
+            Console.WriteLine(result.ToLower());
 
             Console.ReadKey();
         }

@@ -105,6 +105,10 @@ namespace DdddOcr.Net
                 throw new InvalidOperationException("当前识别类型为目标检测");
             }
             using var image = Mat.FromImageData(bytes, ImreadModes.AnyColor);
+            if (image.Width == 0 && image.Height == 0)
+            {
+                throw new InvalidOperationException("载入图像数据损坏或图片类型错误");
+            }
             var inputs = ClassifyPrepareProcessing(image);
             IDisposableReadOnlyCollection<DisposableNamedOnnxValue> outputs = InferenceSession.Run(inputs);
             var predictions = outputs.First(x => x.Name == "output").Value as DenseTensor<long>;
@@ -232,6 +236,10 @@ namespace DdddOcr.Net
                 throw new InvalidOperationException("当前识别类型为文字识别");
             }
             using var image = Mat.FromImageData(bytes, ImreadModes.AnyColor);
+            if (image.Width == 0 && image.Height == 0)
+            {
+                throw new InvalidOperationException("载入图像数据损坏或图片类型错误");
+            }
             var inputSize = new Size(416, 416);
             var inputs = DetectPrepareProcessing(image, inputSize);
             IDisposableReadOnlyCollection<DisposableNamedOnnxValue> outputs = InferenceSession.Run(inputs);
