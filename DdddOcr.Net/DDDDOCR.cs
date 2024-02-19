@@ -169,7 +169,7 @@ namespace DdddOcr.Net
             else
             {
                 //BGR2GRAY? RGB2GRAY?
-                resizedImg = image.Resize(new Size(image.Width * Convert.ToDouble(64 / image.Height), 64), interpolation: InterpolationFlags.Linear).CvtColor(ColorConversionCodes.BGR2GRAY);
+                resizedImg = image.Resize(new Size(image.Width * Convert.ToDouble(64d / image.Height), 64d), interpolation: InterpolationFlags.Linear).CvtColor(ColorConversionCodes.BGR2GRAY);
             }
             #endregion
 
@@ -267,7 +267,7 @@ namespace DdddOcr.Net
 
             float ratio = Math.Min((float)inputSize.Height / image.Rows, (float)inputSize.Width / image.Cols);
             var resizedImg = new Mat();
-            Cv2.Resize(image, resizedImg, new Size((int)(image.Cols * ratio), (int)(image.Rows * ratio)), 0, 0, InterpolationFlags.Linear);
+            Cv2.Resize(image, resizedImg, new Size((image.Cols * ratio), (image.Rows * ratio)), 0, 0, InterpolationFlags.Linear);
 
             resizedImg.CopyTo(paddedImg[new Rect(0, 0, resizedImg.Cols, resizedImg.Rows)]);
 

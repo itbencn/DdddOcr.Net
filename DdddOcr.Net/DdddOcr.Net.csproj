@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Authors>itbencn</Authors>
-		<Version>0.24.0116</Version>
+		<Version>0.24.0219</Version>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<PackageProjectUrl>https://github.com/itbencn/DdddOcr.Net</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
